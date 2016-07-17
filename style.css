@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya';
+
+html {
+  font-family: 'Arya', sans-serif;
+
+}
+
+.btn-fam{
+  font-family: 'Arya', sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  border: #ccc;
+  background-color: rgb(237, 54, 28);
+  width: 150px;
+  color: white;
+  padding: 10px;
+}
+
+.btn-color{
+  background-color:rgb(237, 54, 28) !important;
+  color:white !important;
+  border: white;
+}
+
+.color {
+  color: rgb(237, 54, 28);
+}
+
+.btn {
+  font-family: 'Arya', sans-serif;
+}
+
+.jumbotron{
+  background-color: white !important;
+  text-align: center !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-brand, #dropdown-toggle  {
+  color:  rgb(237, 54, 28);
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 40px;
+}
+#custom-bootstrap-menu.navbar-default, #dropdown-toggle  {
+  background-color: rgba(255, 255, 255, 0.73);
+  border: none;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  padding: 10px;
+
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a, #dropdown-toggle {
+  color:  rgb(237, 54, 28);
+  border-bottom: rgb(237, 54, 28);
+  background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus,
+#dropdown-toggle {
+  color: rgba(251, 251, 251, 0.81);
+  background-color: rgb(237, 54, 28);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus,
+#dropdown-toggle  {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(131, 28, 28, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+  border-color: rgb(237, 54, 28);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus,
+#dropdown-toggle  {
+  background-color: #ffffff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar, #dropdown-toggle  {
+  background-color: rgb(237, 54, 28);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar, #dropdown-toggle  {
+  background-color: rgb(237, 54, 28);
+}
