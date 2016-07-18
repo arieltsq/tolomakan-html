@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> TOLO MAKAN? </title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poppins" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- <script src="./js/main.js"></script> -->
+  <!-- <script src="./js/user_auth.js"></script>
+  <script src="./js/about.js"></script> -->
+  <script src="./js/login.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav id="custom-bootstrap-menu" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="brand" href="index.html">
+          TOLO MAKAN?
+        </a></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll"> <a href="about.html">About Us</a></li>
+          <li class="page-scroll"> <a href="apidoc.html">Documentation</a></li>
+          <li class="page-scroll"> <a href="login.html">Login</a></li>
+          <li class="page-scroll"> <a href="register.html">New User</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <form class="form-horizontal" id="myForm">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label font-fam big-font">Email</label>
+          <div class="col-sm-10">
+            <input type="email" id="email" class="form-control font-fam big-font" name="email" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label font-fam big-font">Password</label>
+          <div class="col-sm-10">
+            <input type="password" id="password" class="form-control font-fam big-font" name="password" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn-fam pull-right">Sign in</button>
+          </div>
+        </div>
+      </form>
+      <div id="result"></div>
+      <div id="result2"></div>
+      <div id="currentUser"></div>
+    </div>
+  </body>
+  </html>

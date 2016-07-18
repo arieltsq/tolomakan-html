@@ -1,8 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya';
 
-html {
+body {
   font-family: 'Arya', sans-serif;
-
 }
 
 .btn-fam{
@@ -26,6 +25,12 @@ html {
   color: rgb(237, 54, 28);
 }
 
+.font-fam {
+  font-family: 'Arya', sans-serif;
+}
+.big-font{
+  font-size: 17px;
+}
 .btn {
   font-family: 'Arya', sans-serif;
 }
@@ -37,6 +42,15 @@ html {
   align-content: center !important;
 }
 
+#name .page-scroll {
+  color: black;
+}
+#login_link {
+  visibility: hidden;
+}
+#user_link {
+  visibility: hidden;
+}
 #custom-bootstrap-menu.navbar-default .navbar-brand, #dropdown-toggle  {
   color:  rgb(237, 54, 28);
   font-family: 'Luckiest Guy', cursive;
@@ -48,7 +62,8 @@ html {
   font-family: 'Luckiest Guy', cursive;
   font-size: 20px;
   padding: 10px;
-
+  border-bottom: 2px solid rgb(237, 54, 28);
+  border-radius: 30%;
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a, #dropdown-toggle {
   color:  rgb(237, 54, 28);
@@ -58,8 +73,8 @@ html {
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus,
 #dropdown-toggle {
-  color: rgba(251, 251, 251, 0.81);
-  background-color: rgb(237, 54, 28);
+  color:black;
+  /*background-color: rgb(237, 54, 28);*/
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
