@@ -1,5 +1,5 @@
 /* global $ display _*/
-var serverURL = 'http://tolomakan.herokuapp.com/'
+var serverURL = 'https://tolomakan.herokuapp.com/'
 var currentUser = null
 
 // We are assuming Local Storage is supported

@@ -6,7 +6,7 @@ $(function () {
 })
 
 function fetchMakan () {
-  $.get('http://tolomakan.herokuapp.com/makans')
+  $.get('https://tolomakan.herokuapp.com/makans')
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<ul><li>' + datum.name + '- <i> ' + datum.categories + '</i></li></ul>')

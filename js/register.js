@@ -1,5 +1,5 @@
 /* global $ */
-var serverURL = 'http://tolomakan.herokuapp.com/'
+var serverURL = 'https://tolomakan.herokuapp.com/'
 
 $(function () {
   // listen for the form login
