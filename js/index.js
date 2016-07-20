@@ -8,7 +8,7 @@ $(function () {
   })
   $('#submit').click(function () {
     console.log('clicked')
-    function initMap2()
+    initMap2()
   })
 })
 
