@@ -2,6 +2,7 @@
 $(function () {
   $('#tolo').click(function () {
     fetchTolo()
+
   })
   $('#random').click(function () {
     fetchMakan()
@@ -15,22 +16,18 @@ $(function () {
 function fetchMakan () {
   $('#main').empty()
   $('#indexText').empty()
-  $('#indexText').append('<h4>The MAKAN Master has spoke: </h4>')
+  // $('#indexText').append('<h4>The MAKAN Master has spoke: </h4>')
   $.get('https://tolomakan.herokuapp.com/makans')
   .done(function (data) {
     data.forEach(function (datum) {
       // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color">' + datum.name + '-' + datum.categories + '</div></div>').css('height', '300px')
-      $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
+      $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '</div></div></div>')
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
     console.log(errorThrown)
   })
 }
-
-$('.edit').click(function () {
-  console.log('click')
-})
 function fetchTolo () {
   $('#main').empty()
   $('#indexText').empty()
@@ -49,53 +46,20 @@ function fetchTolo () {
   })
 }
 
-function initMap2() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: {lat: 40.731, lng: -73.997}
-  })
-  var geocoder = new google.maps.Geocoder
-  var infowindow = new google.maps.InfoWindow
-
-
-  geocodeLatLng(geocoder, map, infowindow);
-}
-
-function geocodeLatLng(geocoder, map, infowindow) {
-  // var input = document.getElementById('latlng').value;
-  // var latlngStr = input.split(',', 2);
-  console.log("testing man" + pos.lat + pos.lng)
-  var latlng = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)}
-  geocoder.geocode({'location': latlng} , function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      if (results[1]) {
-        // map.setZoom(11)
-        // var marker = new google.maps.Marker({
-        //   position: latlng,
-        //   map: map
-        // });
-        $('#indexText').append(results[1].formatted_address)
-        // infowindow.setContent(results[1].formatted_address);
-        // infowindow.open(map, marker);
-      } else {
-        window.alert('No results found');
-      }
-      console.log("inside of status ok")
-    } else {
-      // window.alert('Geocoder failed due to: ' + status);
-    }
-  })
-}
 function fetchAddress(){
   $('#main').empty()
   $('#indexText').empty()
   $.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + pos.lng + '2%2C' + pos.lat + '.json?types=address&access_token=pk.eyJ1IjoiYXJpZWx0c3EiLCJhIjoiY2lxdW8wN2VvMDBjNGZzbmhxcHZucTlnYyJ9.ZlhYXCCC5kB9G7X3RYzoFw')
   .done(function (data) {
+    console.log(data.features[0])
     console.log(data.features[0].place_name)
+    // $('#indexText').empty()
     // data.forEach(function (datum) {
     // console.log(datum)
     // })
     // console.log(data)
+    var text = $('#currentLocation');
+    text.val(data.features[0].place_name);
   }).fail(function (jqXHR, textStatus, errorThrown) {
     console.log(errorThrown)
   })
