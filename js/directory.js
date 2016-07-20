@@ -1,5 +1,4 @@
 /* global $  */
-var count = 0
 $(function () {
   $('.dropdown-Categories').on('click', 'li', function (event) {
     var categories = $(this).text()
