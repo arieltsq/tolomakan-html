@@ -13,9 +13,7 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       }
-      if (pos) {
-        geolocationAjax()
-      }
+
 
       infoWindow.setPosition(pos)
       infoWindow.setContent('Location found.')
