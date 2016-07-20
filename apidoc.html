@@ -8,7 +8,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="./js/user_auth.js"></script>
   <script src="./js/about.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
   <link rel="icon" type="image/png" href="images/fav-icon.png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -54,23 +54,36 @@
 
         <h3 class="font-fam"><u> DOCUMENTATION ON TOLO MAKAN API </u></h3>
         <div class="panel panel-default">
-        <div class="panel-body">
-        <p>  The API is hosted on herokuapp, here's the link to it :
-          https://tolomakan.herokuapp.com/ </p>
-        </div>
-      </div>
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <h3 class="panel-title"><a href="https://tolomakan.herokuapp.com/makans">https://tolomakan.herokuapp.com/makans</a></h3>
-          </div>
           <div class="panel-body">
-            Panel content
+            <p class="bigger-font"><span class="glyphicon glyphicon-asterisk color" aria-hidden="true"></span> The API is hosted on herokuapp, here's the link to it :
+              <a href="https://tolomakan.herokuapp.com"> https://tolomakan.herokuapp.com/</a>  <span class="glyphicon glyphicon-asterisk color" aria-hidden="true"></span></p>
+            </div>
+          </div>
+          <div class="panel panel-default panel-border">
+            <div class="panel-heading panel-color">
+              <h3 class="panel-title font-fam">On <a href="https://tolomakan.herokuapp.com/makans"><span class="bigger-font">/makans</span></a></h3>
+            </div>
+            <div class="panel-body">
+              Will get all the content of Makan Object, here's an example of the data format:
+              <p class="pBox">{
+                _id: "578e03e10d57c98311936706", <br>
+                name: "Xi Xiang Feng Yong Tau Fu",<br>
+                loc: [103.846598,1.372184],<br>
+                latitude: 1.372184,<br>
+                longitude: 103.846598,<br>
+                address: "#01-23, Ang Mo Kio Food Centre, 724 Ang Mo Kio Avenue 6, 560724",<br>
+                type: "Hawker", <br>
+                categories: "Chinese", <br>
+                mapId: "ChIJUTuowOcW2jER9Sero-2KrbI",<br>
+                price: 5, <br>
+                __v: 0 }<br></p>
+              <div class="makans"></div>
+            </div>
           </div>
         </div>
       </div>
+      <div id="footer">
+      </div>
     </div>
-    <div id="footer">
-    </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

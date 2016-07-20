@@ -31,7 +31,8 @@ function fetchTolo () {
   $('#main').empty()
   $('#indexText').empty()
   $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
-  $.get('https://tolomakan.herokuapp.com/random')
+  var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
+  $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
       // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color"> <b>Place: </b>' + datum.name + '<br/>' + '<b>Address:</b> ' + datum.address + '<b>Categories:</b> ' + datum.categories + '</div></div>')

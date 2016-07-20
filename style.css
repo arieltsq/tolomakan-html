@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya|Reem+Kufi';
+@import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya|Reem+Kufi|Bitter';
 
 html,
 body {
@@ -7,6 +7,10 @@ body {
 	height:100%;
   font-family: 'Reem Kufi', sans-serif;
 }
+#map {
+	display: none;
+	height: 100%;
+} 
 #wrapper {
 	min-height:100%;
 	position:relative;
@@ -53,9 +57,17 @@ font-size: 16px !important;
 }
 
 .color {
-  color: rgb(237, 54, 28);
+  color: rgb(237, 54, 28) !important;
 }
 
+.panel-color {
+	background-color: rgb(237, 54, 28) !important;
+  color: white !important;
+	border: 1px rgb(237, 54, 28);
+}
+.panel-border {
+	border: 1.5px solid rgb(237, 54, 28) !important;
+}
 .font-fam {
   font-family: 'Reem Kufi', sans-serif;
 }
@@ -63,12 +75,22 @@ font-size: 16px !important;
   font-size: 17px;
 }
 .bigger-font{
-  font-size: 20px;
+  font-size: 20px !important;
 	font-family: 'Reem Kufi', sans-serif;
-
+}
+.biggest-font{
+	font-size: 24px !important;
+	font-family: 'Reem Kufi', sans-serif;
 }
 .btn {
   font-family: 'Reem Kufi', sans-serif;
+}
+.pBox {
+	border-left: 1px solid rgb(237, 54, 28);
+	border-right: 1px solid rgb(237, 54, 28);
+	color: #00805D;
+	font-size: 13px !important;
+	font-family: 'Bitter', serif;
 }
 
 .jumbotron{
