@@ -9,9 +9,9 @@
   <!-- <script src="./js/user_auth.js"></script> -->
   <script src="./js/check_user.js"></script>
   <script src="./js/about.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/directory.js"></script>
   <link rel="stylesheet" href="style.css">
-   <link rel="icon" type="image/png" href="images/fav-icon.png" />
+  <link rel="icon" type="image/png" href="images/fav-icon.png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
@@ -54,50 +54,53 @@
   <div id="wrapper">
     <div class="container content">
       <div class="jumbotron">
+        <h3 class="font-fam"><u>Directory to Makan Places</u> </h1>
+          <br>
 
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-            <div class="input-group">
-              <span class="input-group-btn">
-                <button class="btn btn-default btn-color" type="button"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></button>
-              </span>
-              <input type="text" class="form-control" placeholder="Your current location">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle btn-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Budget <span class="caret"></span></button>
-                <ul class="dropdown-menu">
+          <div class="row">
+            <div class="col-md-4">
+              <p class="font-fam"> Searching by Categories: </p>
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger">Categories</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-Categories">
 
-                  <li><a href="#"> $5 - $10 </a></li>
-                  <li><a href="#"> $10 - $15 </a></li>
-                  <li><a href="#"> $15 - $20</a></li>
-
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Feeling Rich</a></li>
+                    <li><a>Aussie</a></li>
+                    <li><a>Chinese</a></li>
+                    <li><a>Dessert</a></li>
+                    <li><a>Europe</a></li>
+                    <li><a>French</a></li>
+                    <li><a>Italian</a></li>
+                    <li><a>Japanese</a></li>
+                    <li><a>Korean</a></li>
+                    <li><a>Pastries</a></li>
+                    <li><a>Thai</a></li>
+                    <li><a>Western</a></li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
                 </ul>
               </div>
             </div>
-            <br>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+          </div>
+          <div class="col-md-4">
+          </div>
+          <div id="indexText" class="bigger-font"></div>
 
-            <div class="col-md-4"></div>
+          <div class="media">
+            <div class="media-left media-middle">
+            </div>
+            <div id="main">
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-6"><button class="btn-fam pull-right" id="tolo"> TOLO ?</button></div>
-          <div class="col-xs-6"><button class="btn-fam pull-left" id="random"> ANYTHING LOR !</button></div>
-        </div>
-        <br>
-        <div id="indexText" class="bigger-font"></div>
-        <div class="media">
-          <div class="media-left media-middle">
-        </div>
-        <div id="main">
-        </div>
       </div>
+      <div id="footer">
       </div>
-
-</div>
-<div id="footer">
-</div>
-</div>
-</body>
-</html>
+    </div>
+  </body>
+  </html>

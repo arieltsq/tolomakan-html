@@ -1,18 +1,49 @@
-@import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya';
+@import 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Arya|Reem+Kufi';
 
+html,
 body {
-  font-family: 'Arya', sans-serif;
+	margin:0;
+	padding:0;
+	height:100%;
+  font-family: 'Reem Kufi', sans-serif;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+.content {
+	padding-bottom:400px; /* Height of the footer element */
+}
+#footer {
+	width:100%;
+  background: url("images/footer.png");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+	height:500px;
+	position:absolute;
+	bottom:0;
+	left:0;
 }
 
 .btn-fam{
-  font-family: 'Arya', sans-serif;
-  font-size: 18px;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 15px;
   border-radius: 10px;
   border: #ccc;
   background-color: rgb(237, 54, 28);
   width: 150px;
   color: white;
   padding: 10px;
+}
+p{
+font-size: 16px !important;
+	font-family: 'Reem Kufi', sans-serif;
+
+}
+.thumbsize{
+  width: 800px;
 }
 
 .btn-color{
@@ -26,13 +57,18 @@ body {
 }
 
 .font-fam {
-  font-family: 'Arya', sans-serif;
+  font-family: 'Reem Kufi', sans-serif;
 }
 .big-font{
   font-size: 17px;
 }
+.bigger-font{
+  font-size: 20px;
+	font-family: 'Reem Kufi', sans-serif;
+
+}
 .btn {
-  font-family: 'Arya', sans-serif;
+  font-family: 'Reem Kufi', sans-serif;
 }
 
 .jumbotron{
@@ -59,7 +95,7 @@ body {
 #custom-bootstrap-menu.navbar-default, #dropdown-toggle  {
   background-color: rgba(255, 255, 255, 0.73);
   border: none;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Reem Kufi', sans-serif;
   font-size: 20px;
   padding: 10px;
   border-bottom: 2px solid rgb(237, 54, 28);
