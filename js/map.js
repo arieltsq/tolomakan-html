@@ -1,5 +1,3 @@
-
-
 function initMap1() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
@@ -26,10 +24,9 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     travelMode: google.maps.TravelMode[selectedMode]
   }, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response)
+      directionsDisplay.setDirections(response);
     } else {
       window.alert('Directions request failed due to ' + status);
     }
-  })
+  });
 }
-s

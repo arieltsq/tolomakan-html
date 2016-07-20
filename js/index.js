@@ -38,8 +38,9 @@ function fetchTolo () {
   $('#indexText').empty()
   $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
   //  1.278668, 103.841098
+  //103.8434633, 1.2776249
   // var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
-  var data = 'lng=' + 103.841098 + '&' + 'lat=' + 1.278668
+  var data = 'lng=' + 103.8434633 + '&' + 'lat=' + 1.2776249
   $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
