@@ -20,11 +20,11 @@ body {
 	padding-bottom:400px; /* Height of the footer element */
 }
 #map1 {
-	height: 100%;
+	height: 60%;
 }
 #floating-panel {
 	position: absolute;
-	top: 10px;
+	top: 100px;
 	left: 25%;
 	z-index: 5;
 	background-color: #fff;

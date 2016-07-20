@@ -1,3 +1,9 @@
+$(document).on('click', '#getMore', function () {
+  fetchTolo()
+  fetchMap()
+})
+
+
 function initMap1() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
