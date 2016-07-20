@@ -31,7 +31,7 @@ function getCategories (categories) {
 function getPrice (price) {
   $('#main').empty()
   $('#indexText').empty()
-  $('#indexText').append('<h4> Here are the Categories inside: ' + price + '</h4>')
+  $('#indexText').append('<h4> Here are the Makan Places inside: ' + price + '</h4>')
   $.get('https://tolomakan.herokuapp.com/price/' + price)
   .done(function (data) {
     console.log(data.makan)
