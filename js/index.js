@@ -11,7 +11,7 @@ $(function () {
 function fetchMakan () {
   $('#main').empty()
   $('#indexText').empty()
-  $('#indexText').append('<h3>The MAKAN Master has spoke: </h3>')
+  $('#indexText').append('<h4>The MAKAN Master has spoke: </h4>')
   $.get('https://tolomakan.herokuapp.com/makans')
   .done(function (data) {
     data.forEach(function (datum) {
@@ -30,7 +30,7 @@ $('.edit').click(function () {
 function fetchTolo () {
   $('#main').empty()
   $('#indexText').empty()
-  $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
+  $('#indexText').append('<h4> Here are the places you should makan today!</h4>')
   var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
   $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
