@@ -69,19 +69,20 @@ function geocodeLatLng(geocoder, map, infowindow) {
   geocoder.geocode({'location': latlng} , function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       if (results[1]) {
-        map.setZoom(11);
-        var marker = new google.maps.Marker({
-          position: latlng,
-          map: map
-        });
+        // map.setZoom(11)
+        // var marker = new google.maps.Marker({
+        //   position: latlng,
+        //   map: map
+        // });
         $('#currentLocation').append(results[1].formatted_address)
         // infowindow.setContent(results[1].formatted_address);
         // infowindow.open(map, marker);
       } else {
         window.alert('No results found');
       }
-    } else {
-      window.alert('Geocoder failed due to: ' + status);
+console.log("outside of status ok")
+   } else {
+      // window.alert('Geocoder failed due to: ' + status);
     }
   })
 }
