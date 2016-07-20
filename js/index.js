@@ -91,7 +91,7 @@ function fetchAddress(){
   $('#indexText').empty()
   $.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + pos.lng + '%2C' + pos.lat + '.json?types=address&access_token=pk.eyJ1IjoiYXJpZWx0c3EiLCJhIjoiY2lxdW8wN2VvMDBjNGZzbmhxcHZucTlnYyJ9.ZlhYXCCC5kB9G7X3RYzoFw')
   .done(function (data) {
-    console.log(data)
+    console.log(data.features.place_name)
     // data.forEach(function (datum) {
     // console.log(datum)
     // })
