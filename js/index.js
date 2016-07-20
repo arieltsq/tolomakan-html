@@ -1,4 +1,4 @@
-/* global $  */
+/* global $ pos google*/
 $(function () {
   $('#tolo').click(function () {
     fetchTolo()
@@ -65,7 +65,7 @@ function geocodeLatLng(geocoder, map, infowindow) {
   // var input = document.getElementById('latlng').value;
   // var latlngStr = input.split(',', 2);
   // var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
-  geocoder.geocode({'location': pos}, function(results, status) {
+  geocoder.geocode({'location': pos} , function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       if (results[1]) {
         map.setZoom(11);
@@ -82,5 +82,5 @@ function geocodeLatLng(geocoder, map, infowindow) {
     } else {
       window.alert('Geocoder failed due to: ' + status);
     }
-  });
+  })
 }
