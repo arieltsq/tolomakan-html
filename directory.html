@@ -58,12 +58,12 @@
           <br>
 
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <p class="font-fam"> Searching by Categories: </p>
               <div class="btn-group">
-                <button type="button" class="btn btn-danger">Categories</button>
+                <button type="button" class="btn btn-danger" id="get_categories">Categories</button>
                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="caret"></span>
+                  <span class="glyphicon glyphicon-search"></span>
                   <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu dropdown-Categories">
@@ -84,12 +84,12 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
               <p class="font-fam"> Searching by Price: </p>
               <div class="btn-group">
-                <button type="button" class="btn btn-danger">Price</button>
+                <button type="button" class="btn btn-danger" id="get_price">Price $</button>
                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="caret"></span>
+                  <span class="glyphicon glyphicon-search"></span>
                   <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu dropdown-Price">
@@ -105,23 +105,59 @@
                 </ul>
               </div>
             </div>
+            <div class="col-md-2">
+              <p class="font-fam"> Searching by Type: </p>
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger" id="get_type"> Type</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-search"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-Type">
+                  <li><a>Cafe</a></li>
+                  <li><a>Coffeeshop</a></li>
+                  <li><a>Hawker</a></li>
+                  <li><a>Restaurant</a></li>
+                </ul>
+              </div>
+            </div>
             <div class="col-md-4">
-              <p class="font-fam"> Searching by Type and Price: </p>
+              <p class="font-fam"> Precise Search :</p>
               <div class="btn-group" role="group" aria-label="...">
                 <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Price
+                  <button type="button" class="btn btn-danger dropdown-toggle" id="search_type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Type
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu search-Type">
+                    <li><a>Cafe</a></li>
+                    <li><a>Coffeeshop</a></li>
                     <li><a>Hawker</a></li>
                     <li><a>Restaurant</a></li>
-                   <li><a>Cafe</a></li>
                   </ul>
                 </div>
                 <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Type
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" id="search_categories" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu search-Categories">
+                    <li><a>Aussie</a></li>
+                    <li><a>Chinese</a></li>
+                    <li><a>Dessert</a></li>
+                    <li><a>Europe</a></li>
+                    <li><a>French</a></li>
+                    <li><a>Italian</a></li>
+                    <li><a>Japanese</a></li>
+                    <li><a>Korean</a></li>
+                    <li><a>Pastries</a></li>
+                    <li><a>Thai</a></li>
+                    <li><a>Western</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" id="search_price" aria-haspopup="true" aria-expanded="false">
+                    Price
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu search-Price">
@@ -136,10 +172,11 @@
                   </ul>
                 </div>
               </div>
-              <button type="button" class="btn btn-danger">Search</button>
+              <button type="button" class="btn btn-danger" id="search">Search</button>
 
             </div>
           </div>
+          <br>
           <div id="indexText" class="bigger-font"></div>
 
           <div class="media">
