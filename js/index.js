@@ -6,6 +6,10 @@ $(function () {
   $('#random').click(function () {
     fetchMakan()
   })
+  $('#submit').click(function () {
+    console.log('clicked')
+    function initMap2()
+  })
 })
 
 function fetchMakan () {
@@ -53,9 +57,8 @@ function initMap2() {
   var geocoder = new google.maps.Geocoder;
   var infowindow = new google.maps.InfoWindow;
 
-  $('#submit').click(function () {
+
     geocodeLatLng(geocoder, map, infowindow);
-  })
 }
 
 function geocodeLatLng(geocoder, map, infowindow) {
