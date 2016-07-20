@@ -2,12 +2,12 @@ function initMap1() {
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
   var map = new google.maps.Map(document.getElementById('map1'), {
-    zoom: 12,
+    zoom: 14,
     center: {lat: 1.3521, lng: 103.8198}
   });
   directionsDisplay.setMap(map);
 
-  calculateAndDisplayRoute(directionsService, directionsDisplay)
+  calculateAndDisplayRoute(directionsService, directionsDisplay);
   document.getElementById('mode').addEventListener('change', function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   });
@@ -16,12 +16,11 @@ function initMap1() {
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
-    origin: {lat:1.2776249, lng: 103.8434633 },  // Haight.
-    destination: {lat: pinLatitude, lng: pinLongitude},  // Ocean Beach.
+    origin: {lat: 1.2790333999999999, lng: 103.84146129999999},  // Haight.
+    destination: {lat: 1.280183, lng: 103.841451},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
-    // 103.846598, 1.372184
     travelMode: google.maps.TravelMode[selectedMode]
   }, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
