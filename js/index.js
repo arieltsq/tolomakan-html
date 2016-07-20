@@ -53,35 +53,35 @@ function initMap2() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
     center: {lat: 40.731, lng: -73.997}
-  });
-  var geocoder = new google.maps.Geocoder;
-  var infowindow = new google.maps.InfoWindow;
+  })
+  var geocoder = new google.maps.Geocoder
+  var infowindow = new google.maps.InfoWindow
 
 
-    geocodeLatLng(geocoder, map, infowindow);
+  geocodeLatLng(geocoder, map, infowindow);
 }
 
 function geocodeLatLng(geocoder, map, infowindow) {
   // var input = document.getElementById('latlng').value;
   // var latlngStr = input.split(',', 2);
   console.log("testing man" + pos.lat + pos.lng)
-   var latlng = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)}
+  var latlng = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)}
   geocoder.geocode({'location': latlng} , function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
-      // if (results[1]) {
+      if (results[1]) {
         // map.setZoom(11)
         // var marker = new google.maps.Marker({
         //   position: latlng,
         //   map: map
         // });
-        $('#indexText').append(results.formatted_address)
+        $('#indexText').append(results[1].formatted_address)
         // infowindow.setContent(results[1].formatted_address);
         // infowindow.open(map, marker);
-      // } else {
-      //   window.alert('No results found');
-      // }
-console.log("inside of status ok")
-   } else {
+      } else {
+        window.alert('No results found');
+      }
+      console.log("inside of status ok")
+    } else {
       // window.alert('Geocoder failed due to: ' + status);
     }
   })
