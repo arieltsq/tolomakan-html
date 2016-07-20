@@ -45,8 +45,8 @@ function fetchTolo () {
       // $('#main').append('<h4 class="media-heading"> <b>Place: </b>' + datum.name + '</h4>'
 // p class="latitude">' + datum.latitude + '</p><p class="longitude">' + datum.longitude + '</p>
       $('#main').append('<div class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p></div></div></div>')
-      $('.latitude').append(datum.latitude)
-      $('.longitude').append(datum.longitude)
+      // $('.latitude').append(datum.latitude)
+      // $('.longitude').append(datum.longitude)
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
