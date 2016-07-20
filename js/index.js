@@ -79,7 +79,8 @@ function fetchMap () {
   console.log(pinLongitude)
   $('#main').empty()
   $('#indexText').empty()
-  window.location.href = './map.html?pinLat=' + pinLatitude + '&pinLng=' + pinLongitude + '&posLng=' + pos.lng + '&posLat=' + pos.lat
+
+  // window.location.href = './map.html?pinLat=' + pinLatitude + '&pinLng=' + pinLongitude + '&posLng=' + pos.lng + '&posLat=' + pos.lat
 }
 
 function initMap1() {
