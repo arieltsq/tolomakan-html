@@ -13,6 +13,11 @@ $(function () {
   })
 })
 
+$(document).on('click', '.makanOption', function() {
+    fetchMap()
+})
+
+
 function fetchMakan () {
   $('#main').empty()
   $('#indexText').empty()
@@ -63,4 +68,16 @@ function fetchAddress(){
   }).fail(function (jqXHR, textStatus, errorThrown) {
     console.log(errorThrown)
   })
+}
+
+function fetchMap() {
+    pinLatitude = $('.latitude').first().text()
+    pinLongitude = $('.longitude').first().text()
+
+    console.log(pinLatitude)
+    console.log(pinLongitude)
+
+    $('#main').empty()
+    $('#indexText').empty()
+    window.location.href = './map.html?pinLat=' + pinLatitude + '&pinLng=' + pinLongitude + '&posLng=' + pos.lng + '&posLat=' + pos.lat
 }

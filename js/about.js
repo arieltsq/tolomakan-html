@@ -6,6 +6,7 @@
 // }
 $(function () {
   if (window.localStorage.getItem('email') || window.localStorage['auth_token']) {
+    $('#name').empty()
     $('#name').append('[ ' + window.localStorage.getItem('name') + ' ]' + ' <span class="caret"></span>').css('color', 'black')
   }
 })
