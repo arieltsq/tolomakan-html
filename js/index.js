@@ -64,8 +64,9 @@ function initMap2() {
 function geocodeLatLng(geocoder, map, infowindow) {
   // var input = document.getElementById('latlng').value;
   // var latlngStr = input.split(',', 2);
-  // var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
-  geocoder.geocode({'location': pos} , function(results, status) {
+  console.log("testing man" + pos.lat + pos.lng)
+   var latlng = {lat: parseFloat(pos.lat), lng: parseFloat(pos.lng)}
+  geocoder.geocode({'location': latlng} , function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       if (results[1]) {
         map.setZoom(11);
