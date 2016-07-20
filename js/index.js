@@ -89,9 +89,9 @@ function geocodeLatLng(geocoder, map, infowindow) {
 function fetchAddress(){
   $('#main').empty()
   $('#indexText').empty()
-  $.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + pos.lng + '%2C' + pos.lat + '.json?types=address&access_token=pk.eyJ1IjoiYXJpZWx0c3EiLCJhIjoiY2lxdW8wN2VvMDBjNGZzbmhxcHZucTlnYyJ9.ZlhYXCCC5kB9G7X3RYzoFw')
+  $.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + pos.lng + '2%2C' + pos.lat + '.json?types=address&access_token=pk.eyJ1IjoiYXJpZWx0c3EiLCJhIjoiY2lxdW8wN2VvMDBjNGZzbmhxcHZucTlnYyJ9.ZlhYXCCC5kB9G7X3RYzoFw')
   .done(function (data) {
-    console.log(data.features.place_name)
+    console.log(data.features)
     // data.forEach(function (datum) {
     // console.log(datum)
     // })
