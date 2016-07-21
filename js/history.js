@@ -3,7 +3,6 @@ fetchHistory()
 })
 
 function fetchHistory () {
-console.log('wtf')
   $.ajax({
     type: 'GET',
     url: 'https://tolomakan.herokuapp.com/history/',

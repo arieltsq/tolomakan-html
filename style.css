@@ -92,7 +92,7 @@ font-size: 16px !important;
 	border: 1px rgb(237, 54, 28);
 }
 .panel-border {
-	border: 1.5px solid rgb(237, 54, 28) !important;
+	border: 0.5px solid rgb(237, 54, 28) !important;
 }
 .font-fam {
   font-family: 'Reem Kufi', sans-serif;
@@ -115,7 +115,6 @@ font-size: 16px !important;
 	border-left: 1px solid rgb(237, 54, 28);
 	border-right: 1px solid rgb(237, 54, 28);
 	color: #00805D;
-	font-size: 13px !important;
 	font-family: 'Bitter', serif;
 }
 

@@ -5,15 +5,19 @@ $(function () {
   $('#tolo').click(function () {
     fetchTolo()
   })
-  $('#random').click(function () {
-    fetchMakan()
-  })
+  // $('#random').click(function () {
+  //   fetchMakan()
+  // })
   $('.dropdown-Price').on('click', 'li', function (event) {
     var price = $(this).text()
     console.log(price)
     $('#get_price').text(price)
     getBudget(price)
   })
+  $('#submit').click(function () {
+  console.log('clicked')
+  fetchAddress()
+})
 })
 
 $(document).on('click', '.makanOption', function () {
@@ -105,5 +109,24 @@ function saveHistory (historyId) {
     success: function (result) {
       $('#historyText').append(btnID + '<h3> History Saved! </h3>')
     }
+  })
+}
+
+function fetchAddress () {
+  $('#main').empty()
+  $('#indexText').empty()
+  $.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + pos.lng + '2%2C' + pos.lat + '.json?types=address&access_token=pk.eyJ1IjoiYXJpZWx0c3EiLCJhIjoiY2lxdW8wN2VvMDBjNGZzbmhxcHZucTlnYyJ9.ZlhYXCCC5kB9G7X3RYzoFw')
+  .done(function (data) {
+    console.log(data.features[0])
+    console.log(data.features[0].place_name)
+    // $('#indexText').empty()
+    // data.forEach(function (datum) {
+    // console.log(datum)
+    // })
+    // console.log(data)
+    var text = $('#currentLocation');
+    text.val(data.features[0].place_name);
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    console.log(errorThrown)
   })
 }
