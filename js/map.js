@@ -15,9 +15,12 @@ function initMap1() {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
+  console.log(pinLongitude, pinLatitude)
   directionsService.route({
-    origin: {lat: 1.2790333999999999, lng: 103.84146129999999},  // Haight.
-    destination: {lat: 1.280183, lng: 103.841451},  // Ocean Beach.
+  //   pinLatitude
+  // pinLongitude
+    origin: {lat: pos.lat, lng: pos.lng},  // Haight.
+    destination: {lat: pinLatitude, lng: pinLongitude},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
