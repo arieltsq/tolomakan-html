@@ -59,15 +59,80 @@
               <a href="https://tolomakan.herokuapp.com"> https://tolomakan.herokuapp.com/</a>  <span class="glyphicon glyphicon-asterisk color" aria-hidden="true"></span></p>
             </div>
           </div>
+          <table class="table table-striped">
+            <tr class="danger">
+              <td>METHOD</td>
+              <td>ENDPOINT</td>
+              <td>USAGE</td>
+              <td>RETURNS</td>
+              <td>AUTHENTICATION</td>
+            </tr>
+            <tr>
+              <td class="active">GET</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/makans">/makans</a></td>
+              <td class="active">Get All The Food Places</td>
+              <td class="active">Food Places</td>
+              <td class="active">No</td>
+            </tr>
+            <tr>
+              <td class="active">POST</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/makans">/makans</a></td>
+              <td class="active">Add a new food place</td>
+              <td class="active">The food place that has just been added</td>
+              <td class="active">Yes</td>
+            </tr>
+            <tr>
+              <td class="active">GET</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/random">/random</a></td>
+              <td class="active">Get five random eateries in Singapore</td>
+              <td class="active">Five food places</td>
+              <td class="active">Yes</td>
+            </tr>
+            <tr>
+              <td class="active">GET</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/type">/type (i.e. Western, Chinese and etc)</a></td>
+              <td class="active">Get all food places based on the choice of cuisine </td>
+              <td class="active">Food directory</td>
+              <td class="active">No</td>
+            </tr>
+            <tr>
+              <td class="active">GET</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/randomFive">/randomFive</a></td>
+              <td class="active">Get five random eateries around your location (i.e. lng=103.841445, lat=1.278971)</td>
+              <td class="active">Five food places</td>
+              <td class="active">No</td>
+            </tr>
+            <tr>
+              <td class="active">GET</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/randomFive">/randomFive</a></td>
+              <td class="active">Get five random eateries around your location (i.e. lng=103.841445, lat=1.278971)</td>
+              <td class="active">Five food places</td>
+              <td class="active">No</td>
+            </tr>
+            <tr>
+              <td class="active">UPDATE/PUT</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/makans/:id">/makans/:id</a></td>
+              <td class="active">Edit/Update the details of existing food place by their id</td>
+              <td class="active">Update</td>
+              <td class="active">Yes</td>
+            </tr>
+            <tr>
+              <td class="active">DELETE</td>
+              <td class="active"><a href="https://tolomakan.herokuapp.com/makans/:id">/makans/:id</a></td>
+              <td class="active">Delete the existing food place by their id</td>
+              <td class="active">Delete</td>
+              <td class="active">Yes</td>
+            </tr>
+          </table>
           <div class="panel panel-default panel-border">
             <div class="panel-heading panel-color">
-              <h3 class="panel-title font-fam">On <a href="https://tolomakan.herokuapp.com/makans"><span class="bigger-font">/makans</span></a></h3>
+              <h3 class="panel-title font-fam"><a href="https://tolomakan.herokuapp.com/makans"><span class="bigger-font">Example of an object in our TOLOMAKAN API</span></a></h3>
             </div>
             <div class="panel-body">
               Will get all the content of Makan Object, here's an example of the data format:
               <p class="pBox">{
-                _id: "578e03e10d57c98311936706", <br>
-                name: "Xi Xiang Feng Yong Tau Fu",<br>
+                _id: "578e03e107c98311936706", <br>
+                name: "General Assembly",<br>
                 loc: [103.846598,1.372184],<br>
                 latitude: 1.372184,<br>
                 longitude: 103.846598,<br>
@@ -77,13 +142,13 @@
                 mapId: "ChIJUTuowOcW2jER9Sero-2KrbI",<br>
                 price: 5, <br>
                 __v: 0 }<br></p>
-              <div class="makans"></div>
+                <div class="makans"></div>
+              </div>
             </div>
           </div>
         </div>
+        <div id="footer">
+        </div>
       </div>
-      <div id="footer">
-      </div>
-    </div>
-  </body>
-  </html>
+    </body>
+    </html>
