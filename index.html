@@ -42,9 +42,10 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="name">User <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li> <a href="register.html" id="user_link">New User</a></li>
-              <li> <a id="logout">Logout</a></li>
-              <li> <a href="login.html" id="login_link">Login</a></li>
+              <li> <a href="register.html" id="user_link" style="display:none" >New User</a></li>
+              <li> <a id="logout"  style="display:none">Logout</a></li>
+              <li> <a href="login.html" id="login_link" style="display:none">Login</a></li>
+              <li> <a href="history.html" id="history_link" style="display:none"> User History</a></li>
             </ul>
           </li>
         </ul>
@@ -64,15 +65,16 @@
               </span>
               <input type="text" class="form-control" id="currentLocation" readonly>
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle btn-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Budget <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-
-                  <li><a href="#"> $5 - $10 </a></li>
-                  <li><a href="#"> $10 - $15 </a></li>
-                  <li><a href="#"> $15 - $20</a></li>
-
+                <button type="button" class="btn btn-default dropdown-toggle btn-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="get_price">Budget $ <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-Price">
+                  <li><a>5</a></li>
+                  <li><a>10</a></li>
+                  <li><a>15</a></li>
+                  <li><a>20</a></li>
+                  <li><a>25</a></li>
+                  <li><a>30</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Feeling Rich</a></li>
+                  <li><a>50</a></li>
                 </ul>
               </div>
             </div>

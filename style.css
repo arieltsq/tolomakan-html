@@ -129,12 +129,7 @@ font-size: 16px !important;
 #name .page-scroll {
   color: black;
 }
-/*#login_link {
-  visibility: hidden;
-}
-#user_link {
-  visibility: hidden;
-}*/
+
 #custom-bootstrap-menu.navbar-default .navbar-brand, #dropdown-toggle  {
   color:  rgb(237, 54, 28);
   font-family: 'Luckiest Guy', cursive;

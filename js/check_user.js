@@ -7,6 +7,10 @@ $(function () {
   if (window.localStorage.getItem('email') && window.localStorage['auth_token']) {
     loadUser()
   }
+  else
+  {
+    if (typeof (noUser) === 'function') noUser()
+  }
 })
 
 // load the user from the server. This ensures we have a logged in user
@@ -28,15 +32,20 @@ function loadUser () {
         window.localStorage.removeItem('name')
         window.localStorage.removeItem('email')
         window.localStorage.removeItem('auth_token')
+        if (typeof (noUser) === 'function') noUser()
       }
       else {
         currentUser = filtered[0]
-        display()
+        if (typeof (display) === 'function') display()
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
       // else error, redirect to login
       console.log('error in user_auth')
+        window.localStorage.removeItem('name')
+        window.localStorage.removeItem('email')
+        window.localStorage.removeItem('auth_token')
+        if (typeof (noUser) === 'function') noUser()
     }
   })
 }

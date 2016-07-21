@@ -8,7 +8,12 @@ $(function () {
   $('#random').click(function () {
     fetchMakan()
   })
-
+  $('.dropdown-Price').on('click', 'li', function (event) {
+    var price = $(this).text()
+    console.log(price)
+    $('#get_price').text(price)
+    getBudget(price)
+  })
 })
 
 $(document).on('click', '.makanOption', function () {
@@ -23,7 +28,18 @@ $(document).on('click', '.saveOption', function () {
   console.log('button click')
   saveHistory(historyId)
 })
-
+function getBudget(price) {
+  $('#main').empty()
+  $('#indexText').empty()
+  $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + 'lng=' + pos.lng + 'price=' + price)
+  .done(function (data) {
+    data.forEach(function (datum) {
+      $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
+    })
+  }).fail(function (jqXHR, textStatus, errorThrown) {
+    console.log(errorThrown)
+  })
+}
 
 function fetchMakan () {
   $('#main').empty()
@@ -74,11 +90,11 @@ function fetchMap (makanId) {
 }
 
 function saveHistory (historyId) {
-
-  btnID = $('#' + historyId).find('.datumID').text()
-   console.log(btnID)
-   $.ajax({
-    type: "POST",
+  $('#historyText').empty()
+  var btnID = $('#' + historyId).find('.datumID').text()
+  console.log(btnID)
+  $.ajax({
+    type: 'POST',
     url: 'https://tolomakan.herokuapp.com/history/' + btnID,
     beforeSend: function (xhr) {
       xhr.setRequestHeader('User-Email', window.localStorage['email'])
@@ -86,7 +102,6 @@ function saveHistory (historyId) {
     },
     success: function (result) {
       $('#historyText').append(btnID + '<h3> History Saved! </h3>')
-
     }
-})
+  })
 }
