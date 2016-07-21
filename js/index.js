@@ -107,7 +107,7 @@ function saveHistory (historyId) {
       xhr.setRequestHeader('Auth-Token', window.localStorage['auth_token'])
     },
     success: function (result) {
-      $('#historyText').append(btnID + '<h3> History Saved! </h3>')
+      $('#indexText').append('<h3> History Saved! </h3>')
     }
   })
 }
