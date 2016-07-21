@@ -11,7 +11,7 @@
   <script src="./js/index.js"></script>
   <script src="./js/pinscript.js"></script>
   <link rel="stylesheet" href="style.css">
-   <link rel="icon" type="image/png" href="images/fav-icon.png" />
+  <link rel="icon" type="image/png" href="images/fav-icon.png" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
@@ -58,12 +58,11 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="col-md-4">
-
             <div class="input-group">
               <span class="input-group-btn">
                 <button class="btn btn-default btn-color" id="submit"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></button>
               </span>
-              <input type="text" class="form-control" id="currentLocation" disabled="true" style="width: 300px;">
+              <input type="text" class="form-control" id="currentLocation" readonly>
               <div class="input-group-btn">
                 <button type="button" class="btn btn-default dropdown-toggle btn-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Budget <span class="caret"></span></button>
                 <ul class="dropdown-menu">
@@ -82,21 +81,38 @@
             <div class="col-md-4"></div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-6"><button class="btn-fam pull-right" id="tolo"> TOLO ?</button></div>
-          <div class="col-xs-6"><button class="btn-fam pull-left" id="random"> ANYTHING LOR !</button></div>
-        </div>
-        <br>
-
+    <br>
+    <div class="row">
+      <div class="col-xs-6"><button class="btn-fam pull-right" id="tolo"> TOLO ?</button></div>
+      <div class="col-xs-6"><button class="btn-fam pull-left" id="random"> ANYTHING LOR !</button></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-10">
         <div id="indexText" class="bigger-font"></div>
-        <div class="media">
-          <div class="media-left media-middle">
+      </div>
+      <div class="col-md-2">
+        <div id="historyText" class="bigger-font"></div>
+      </div>
+    </div>
+    <div class="media">
+      <div class="media-left media-middle">
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+          <div id="main">
+          </div>
         </div>
-        <div id="main">
+        <div class="col-md-2">
+          <div id="historyBtn">
+          </div>
         </div>
       </div>
-      </div>
-<div id="map"></div>
+
+    </div>
+    <!-- end of jumbtron -->
+  </div>
+  <div id="map"></div>
 
 </div>
 <div id="footer">

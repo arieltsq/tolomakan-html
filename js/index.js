@@ -8,14 +8,18 @@ $(function () {
   $('#random').click(function () {
     fetchMakan()
   })
+
 })
 
 $(document).on('click', '.makanOption', function () {
   var makanId = $(this).attr('id')
   console.log(makanId)
-  console.log('click')
+  console.log('checkbox click')
   fetchMap(makanId)
 })
+
+
+
 
 function fetchMakan () {
   $('#main').empty()
@@ -36,12 +40,15 @@ function fetchMakan () {
 function fetchTolo () {
   $('#main').empty()
   $('#indexText').empty()
+  $('#historyText').empty()
   $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
+  $('#historyText').append('<h3> History </h3>')
   var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
   $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<div id="' + data.indexOf(datum) + '" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class="latitude">' + datum.latitude + '</p><p class="longitude">' + datum.longitude + '</p></div></div></div>')
+      $('#historyBtn').append('<button class="btn-small"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>')
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
@@ -59,4 +66,8 @@ function fetchMap (makanId) {
   $('#main').empty()
   $('#indexText').empty()
   window.location.href = './map.html?pinLat=' + pinLatitude + '&pinLng=' + pinLongitude + '&posLng=' + pos.lng + '&posLat=' + pos.lat
+}
+
+function saveHistory () {
+
 }

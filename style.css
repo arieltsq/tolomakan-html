@@ -57,6 +57,16 @@ body {
   color: white;
   padding: 10px;
 }
+.btn-small{
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
+  border: #ccc;
+  background-color: rgb(237, 54, 28);
+  width: 50px;
+  color: white;
+  padding: 10px;
+}
 p{
 font-size: 16px !important;
 	font-family: 'Reem Kufi', sans-serif;
