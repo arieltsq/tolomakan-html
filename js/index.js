@@ -47,21 +47,21 @@ function getBudget (price) {
   })
 }
 
-function fetchMakan () {
-  $('#main').empty()
-  $('#indexText').empty()
-  $('#indexText').append('<h3>The MAKAN Master has spoke: </h3>')
-  $.get('https://tolomakan.herokuapp.com/makans')
-  .done(function (data) {
-    data.forEach(function (datum) {
-      // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color">' + datum.name + '-' + datum.categories + '</div></div>').css('height', '300px')
-      $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
-    })
-    // console.log(data)
-  }).fail(function (jqXHR, textStatus, errorThrown) {
-    console.log(errorThrown)
-  })
-}
+// function fetchMakan () {
+//   $('#main').empty()
+//   $('#indexText').empty()
+//   $('#indexText').append('<h3>The MAKAN Master has spoke: </h3>')
+//   $.get('https://tolomakan.herokuapp.com/makans')
+//   .done(function (data) {
+//     data.forEach(function (datum) {
+//       // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color">' + datum.name + '-' + datum.categories + '</div></div>').css('height', '300px')
+//       $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
+//     })
+//     // console.log(data)
+//   }).fail(function (jqXHR, textStatus, errorThrown) {
+//     console.log(errorThrown)
+//   })
+// }
 
 function fetchTolo () {
   $('#main').empty()
