@@ -1,4 +1,23 @@
+function getParameterByName(name, url) {
+   if (!url) url = window.location.href;
+   name = name.replace(/[\[\]]/g, "\\$&");
+   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+       results = regex.exec(url);
+   if (!results) return null;
+   if (!results[2]) return '';
+   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var posLat
+var posLng
+var pinLat
+var pinLng
+
 function initMap1() {
+  posLat = +getParameterByName('posLat')
+  posLng = +getParameterByName('posLng')
+  pinLat = +getParameterByName('pinLat')
+  pinLng = +getParameterByName('pinLng')
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var directionsService = new google.maps.DirectionsService;
   var map = new google.maps.Map(document.getElementById('map1'), {
@@ -16,8 +35,8 @@ function initMap1() {
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
   directionsService.route({
-    origin: {lat: 1.2790333999999999, lng: 103.84146129999999},  // Haight.
-    destination: {lat: 1.280183, lng: 103.841451},  // Ocean Beach.
+    origin: {lat: posLat, lng: posLng},  // Haight.
+    destination: {lat: pinLat, lng: pinLng},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
