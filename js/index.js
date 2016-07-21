@@ -5,9 +5,6 @@ $(function () {
   $('#tolo').click(function () {
     fetchTolo()
   })
-  // $('#random').click(function () {
-  //   fetchMakan()
-  // })
   $('.dropdown-Price').on('click', 'li', function (event) {
     var price = $(this).text()
     console.log(price)
@@ -15,9 +12,9 @@ $(function () {
     getBudget(price)
   })
   $('#submit').click(function () {
-  console.log('clicked')
-  fetchAddress()
-})
+    console.log('clicked')
+    fetchAddress()
+  })
 })
 
 $(document).on('click', '.makanOption', function () {
@@ -38,7 +35,7 @@ function getBudget (price) {
   $('#indexText').empty()
   // 1.279023, 103.841453
   // $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + '&lng=' + pos.lng + '&price=' + price)
-  $.get('https://tolomakan.herokuapp.com/near?lat=' + 103.841453 + '&lng=' + 1.279023 + '&price=' + price)
+  $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + '&lng=' + pos.lng + '&price=' + price)
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<br><div id="'+data.indexOf(datum)+'" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class= "type"><b>Type:</b> ' + datum.type + '<p class= "Price"><b>Price: $</b>' + datum.price + '<p class="latitude hide">' + datum.latitude + '</p><p class="longitude hide">' + datum.longitude + '</p></div></div></div>')
@@ -54,9 +51,7 @@ function fetchTolo () {
   $('#indexText').empty()
   $('#historyText').empty()
   $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
-  var data = 'lng=' + 1.279023  + '&' + 'lat=' + 103.841453
-  // var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
-  //103.841453 + '&lng=' + 1.279023
+  var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
   $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
