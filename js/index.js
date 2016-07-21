@@ -40,7 +40,7 @@ function fetchTolo () {
   //  1.278668, 103.841098
   // 103.8434633, 1.2776249
   var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
-//  $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
+ $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
       // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color"> <b>Place: </b>' + datum.name + '<br/>' + '<b>Address:</b> ' + datum.address + '<b>Categories:</b> ' + datum.categories + '</div></div>')
