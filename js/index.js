@@ -36,7 +36,9 @@ $(document).on('click', '.saveOption', function () {
 function getBudget (price) {
   $('#main').empty()
   $('#indexText').empty()
-  $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + '&lng=' + pos.lng + '&price=' + price)
+  // 1.279023, 103.841453
+  // $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + '&lng=' + pos.lng + '&price=' + price)
+  $.get('https://tolomakan.herokuapp.com/near?lat=' + 103.841453 + '&lng=' + 1.279023 + '&price=' + price)
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<br><div id="'+data.indexOf(datum)+'" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class= "type"><b>Type:</b> ' + datum.type + '<p class= "Price"><b>Price: $</b>' + datum.price + '<p class="latitude hide">' + datum.latitude + '</p><p class="longitude hide">' + datum.longitude + '</p></div></div></div>')
@@ -47,35 +49,19 @@ function getBudget (price) {
   })
 }
 
-// function fetchMakan () {
-//   $('#main').empty()
-//   $('#indexText').empty()
-//   $('#indexText').append('<h3>The MAKAN Master has spoke: </h3>')
-//   $.get('https://tolomakan.herokuapp.com/makans')
-//   .done(function (data) {
-//     data.forEach(function (datum) {
-//       // $('#main').append('<div class="col-xs-6 col-md-3"> <div class="thumbnail color">' + datum.name + '-' + datum.categories + '</div></div>').css('height', '300px')
-//       $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
-//     })
-//     // console.log(data)
-//   }).fail(function (jqXHR, textStatus, errorThrown) {
-//     console.log(errorThrown)
-//   })
-// }
-
 function fetchTolo () {
   $('#main').empty()
   $('#indexText').empty()
   $('#historyText').empty()
   $('#indexText').append('<h3> Here are the places you should makan today!</h3>')
-  // $('#historyText').append('<h3> History </h3>')
-  var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
+  var data = 'lng=' + 1.279023  + '&' + 'lat=' + 103.841453
+  // var data = 'lng=' + pos.lng + '&' + 'lat=' + pos.lat
+  //103.841453 + '&lng=' + 1.279023
   $.get('https://tolomakan.herokuapp.com/randomFive?' + data)
   .done(function (data) {
     data.forEach(function (datum) {
-      $('#main').append('<div id="'+data.indexOf(datum)+'" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class= "type"><b>Type:</b> ' + datum.type + '<p class= "Price"><b>Price: $</b>' + datum.price + '<p class="latitude hide">' + datum.latitude + '</p><p class="longitude hide">' + datum.longitude + '</p></div></div></div>')
-      console.log(datum)
-      $('#historyBtn').append('<button id="' + data.indexOf(datum) + 'Btn" class="btn-small saveOption"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span><p class="datumID hide">' + datum._id + '</p></button>')
+      $('#main').append('<br><div id="'+data.indexOf(datum)+'" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class= "type"><b>Type:</b> ' + datum.type + '<p class= "Price"><b>Price: $</b>' + datum.price + '<p class="latitude hide">' + datum.latitude + '</p><p class="longitude hide">' + datum.longitude + '</p></div></div></div>')
+      $('#main').append('<div><button id="' + data.indexOf(datum) + 'Btn" class="btn-small saveOption"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span><p class="datumID hide">' + datum._id + '</p></button></div>')
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
