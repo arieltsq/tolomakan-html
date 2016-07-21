@@ -31,7 +31,7 @@ $(document).on('click', '.saveOption', function () {
 function getBudget(price) {
   $('#main').empty()
   $('#indexText').empty()
-  $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + 'lng=' + pos.lng + 'price=' + price)
+  $.get('https://tolomakan.herokuapp.com/near?lat=' + pos.lat + '&lng=' + pos.lng + '&price=' + price)
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<div class="panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div class=" bigger-font"><strong>Place: </strong>' + datum.name + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p>' + '<button class="edit">Edit</button></div></div></div>')
