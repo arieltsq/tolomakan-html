@@ -14,11 +14,15 @@ $(function () {
 $(document).on('click', '.makanOption', function () {
   var makanId = $(this).attr('id')
   console.log(makanId)
-  console.log('checkbox click')
   fetchMap(makanId)
 })
 
-
+$(document).on('click', '.saveOption', function () {
+  var historyId = $(this).attr('id')
+  console.log(historyId)
+  console.log('button click')
+  saveHistory(historyId)
+})
 
 
 function fetchMakan () {
@@ -48,7 +52,7 @@ function fetchTolo () {
   .done(function (data) {
     data.forEach(function (datum) {
       $('#main').append('<div id="' + data.indexOf(datum) + '" class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class="latitude">' + datum.latitude + '</p><p class="longitude">' + datum.longitude + '</p></div></div></div>')
-      $('#historyBtn').append('<button class="btn-small"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>')
+      $('#historyBtn').append('<button id="' + data.indexOf(datum) + 'Btn" class="btn-small saveOption"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span><span class="hide datumID">' + datum.id+ '</span></button>')
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
@@ -68,6 +72,7 @@ function fetchMap (makanId) {
   window.location.href = './map.html?pinLat=' + pinLatitude + '&pinLng=' + pinLongitude + '&posLng=' + pos.lng + '&posLat=' + pos.lat
 }
 
-function saveHistory () {
-
+function saveHistory (historyId) {
+  btnID = $('#' + historyId).find('.datumID').text()
+   console.log(btnID)
 }
