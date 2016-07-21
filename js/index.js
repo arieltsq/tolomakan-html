@@ -78,6 +78,7 @@ function saveHistory (historyId) {
   btnID = $('#' + historyId).find('.datumID').text()
    console.log(btnID)
    $.ajax({
+    type: "POST",
     url: 'https://tolomakan.herokuapp.com/history/' + btnID,
     success: function (result) {
       $('#historyText').append(btnID + '<h3> History Saved! </h3>')
