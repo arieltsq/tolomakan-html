@@ -3,7 +3,7 @@ function initMap1() {
   var directionsService = new google.maps.DirectionsService;
   var map = new google.maps.Map(document.getElementById('map1'), {
     zoom: 14,
-    center: {lat: 1.3521, lng: 103.8198}
+    center: {lat: 37.77, lng: -122.447}
   });
   directionsDisplay.setMap(map);
 
@@ -15,12 +15,9 @@ function initMap1() {
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   var selectedMode = document.getElementById('mode').value;
-  console.log(pinLongitude, pinLatitude)
   directionsService.route({
-  //   pinLatitude
-  // pinLongitude
     origin: {lat: 1.2790333999999999, lng: 103.84146129999999},  // Haight.
-    destination: {lat: pinLatitude, lng: pinLongitude},  // Ocean Beach.
+    destination: {lat: 1.280183, lng: 103.841451},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
     // "property."
