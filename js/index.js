@@ -80,6 +80,10 @@ function saveHistory (historyId) {
    $.ajax({
     type: "POST",
     url: 'https://tolomakan.herokuapp.com/history/' + btnID,
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader('User-Email', window.localStorage['email'])
+      xhr.setRequestHeader('Auth-Token', window.localStorage['auth_token'])
+    },
     success: function (result) {
       $('#historyText').append(btnID + '<h3> History Saved! </h3>')
 
