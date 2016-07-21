@@ -6,51 +6,37 @@
     <title>Travel modes in directions</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- <script src="./map.js"></script> -->
-    <script src="./js/map.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/pinscript.js"></script>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="images/fav-icon.png" />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="./map.js"></script>
 
+    <script src="./javascript/index.js"></script>
+
+    <script src="./pinscript.js"></script>
+    <script src="./geolocate.js"></script>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map1 {
+        height: 100%;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
   </head>
   <body>
-    <nav id="custom-bootstrap-menu" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" id="brand" href="index.html">
-            TOLO MAKAN?
-          </a></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li class="page-scroll"> <a href="about.html">About Us</a></li>
-            <li class="page-scroll"> <a href="apidoc.html">Documentation</a></li>
-            <li class="page-scroll"> <a href="directory.html">Directory</a></li>
-            <!-- <li class="page-scroll"> <a id="name"></a></li> -->
-            <!-- <li class="page-scroll"> <a href="#page-top" id="name"></a></li> -->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="name">User <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li> <a href="register.html" id="user_link">New User</a></li>
-                <li> <a id="logout">Logout</a></li>
-                <li> <a href="login.html" id="login_link">Login</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <div id="floating-panel">
     <b>Mode of Travel: </b>
     <select id="mode">
@@ -61,6 +47,7 @@
     </select>
     </div>
     <div id="map1"></div>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVfD1Z4hserqiO83dg0ZOOexyCepCCg6w&callback=initMap1">
     </script>
