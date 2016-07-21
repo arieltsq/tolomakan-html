@@ -19,7 +19,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   directionsService.route({
   //   pinLatitude
   // pinLongitude
-    origin: {lat: pos.lat, lng: pos.lng},  // Haight.
+    origin: {lat: 1.2790333999999999, lng: 103.84146129999999},  // Haight.
     destination: {lat: pinLatitude, lng: pinLongitude},  // Ocean Beach.
     // Note that Javascript allows us to access the constant
     // using square brackets and a string value as its
