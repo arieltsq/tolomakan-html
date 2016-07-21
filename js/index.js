@@ -14,8 +14,10 @@ $(function () {
   })
 })
 
-$(document).on('click', '.makanOption', function () {
+$(document).on('click', '.makanOption', function (event) {
+  event.preventDefault()
   fetchMap()
+
 })
 
 function fetchMakan () {
@@ -48,6 +50,8 @@ function fetchTolo () {
       $('#main').append('<div class="makanOption panel panel-default"><div class="panel-body"><div class="media-body"><p><h4 class="media-heading"> <div id="value" class=" bigger-font"><strong>Place: </strong>' + '<span class=datumName>' + datum.name + '</span>' + '</div></h4></p>' + '<p><b>Address:</b> ' + datum.address + '</p><p class="color"><b>Categories:</b> ' + datum.categories + '</p><p class="latitude hide">' + datum.latitude + '</p><p class="longitude hide">' + datum.longitude + '</p></div></div></div>')
       pinLatitude = datum.latitude
       pinLongitude = datum.longitude
+      console.log(pinLatitude)
+      console.log(pinLongitude)
     })
     // console.log(data)
   }).fail(function (jqXHR, textStatus, errorThrown) {
