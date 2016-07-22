@@ -72,8 +72,9 @@ function getPrice (price) {
 function getSearchResults (searchType, searchCat, searchPrice) {
   $('#main').empty()
   $('#indexText').empty()
+
   $('#indexText').append('<h4> Your most mafan results of - ' + ' Type: ' + searchType + ' Categories: ' + searchCat + ' Price: $' + searchPrice + '</h4>')
-  $.get('http://tolomakan.herokuapp.com/type?type=' + searchType + '&price=' + searchPrice + '&categories=' + searchCat)
+  $.get('https://tolomakan.herokuapp.com/type?type=' + searchType + '&price=' + searchPrice + '&categories=' + searchCat)
   .done(function (data) {
     console.log(data.makan)
     data.makan.forEach(function (datum) {
